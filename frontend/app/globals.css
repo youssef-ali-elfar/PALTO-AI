@@ -1,0 +1,910 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Kufi+Arabic:wght@400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: "Inter", "Noto Kufi Arabic", sans-serif;
+  background: #fafafa;
+  color: #111827;
+}
+
+/* =========================
+   APP
+========================= */
+
+.app-shell {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background: #fafafa;
+}
+
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+  width: 290px;
+  height: 100vh;
+
+  background: #ffffff;
+
+  border-right: 1px solid #eeeeee;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 24px 18px 16px;
+
+  flex-shrink: 0;
+}
+
+.sidebar-top {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.brand {
+  font-family: "Noto Kufi Arabic", sans-serif;
+
+  font-size: 27px;
+  font-weight: 700;
+
+  letter-spacing: -1px;
+
+  color: #111111;
+
+  padding-left: 10px;
+}
+
+.new-chat {
+  height: 48px;
+
+  border: 1px solid #e4e8ef;
+
+  background: #f7f9ff;
+
+  border-radius: 13px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 0 15px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  color: #20252d;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.new-chat:hover {
+  background: #f0f4ff;
+}
+
+.plus {
+  font-size: 22px;
+  font-weight: 400;
+  color: #3978ee;
+}
+
+
+/* =========================
+   CONVERSATIONS
+========================= */
+
+.sidebar-section {
+  margin-top: 30px;
+}
+
+.section-title {
+  font-size: 12px;
+
+  color: #8a919d;
+
+  font-weight: 500;
+
+  margin: 0 10px 14px;
+}
+
+.conversation {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 10px;
+
+  padding: 11px 10px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  transition: background 0.2s ease;
+}
+
+.conversation:hover {
+  background: #f7f8fa;
+}
+
+.conversation.active {
+  background: #f5f8ff;
+}
+
+.conversation-icon {
+  font-size: 14px;
+
+  color: #737b87;
+
+  margin-top: 2px;
+}
+
+.conversation-title {
+  font-size: 13px;
+
+  font-weight: 500;
+
+  color: #242932;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  max-width: 205px;
+}
+
+.conversation-time {
+  font-size: 11px;
+
+  color: #9aa1ab;
+
+  margin-top: 4px;
+}
+
+
+/* =========================
+   CLINICAL CARD
+========================= */
+
+.clinical-card {
+  margin-top: auto;
+
+  background: #f8f9fb;
+
+  border: 1px solid #e8eaee;
+
+  border-radius: 15px;
+
+  padding: 17px;
+}
+
+.clinical-card-title {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  color: #303641;
+}
+
+.shield {
+  color: #4a82e8;
+  font-size: 10px;
+}
+
+.clinical-card p {
+  margin: 12px 0 0;
+
+  font-size: 12px;
+
+  line-height: 1.7;
+
+  color: #737b87;
+}
+
+
+/* =========================
+   PROFILE
+========================= */
+
+.profile {
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  padding: 18px 7px 3px;
+}
+
+.avatar {
+  width: 38px;
+  height: 38px;
+
+  border-radius: 50%;
+
+  background: #3478ee;
+
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 600;
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.profile-name {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.profile-role {
+  font-size: 11px;
+  color: #9097a2;
+  margin-top: 3px;
+}
+
+.profile-arrow {
+  color: #7b828c;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+.main {
+  flex: 1;
+
+  min-width: 0;
+
+  height: 100vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  background: #ffffff;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.main-header {
+  height: 68px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 0 38px;
+
+  border-bottom: 1px solid #eeeeee;
+}
+
+.header-logo {
+  font-family: "Noto Kufi Arabic", sans-serif;
+
+  font-size: 22px;
+
+  font-weight: 700;
+
+  color: #111111;
+}
+
+.header-status {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  font-size: 11px;
+
+  color: #737b87;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+
+  background: #4f8df7;
+
+  border-radius: 50%;
+}
+
+
+/* =========================
+   CHAT
+========================= */
+
+.chat-area {
+  flex: 1;
+
+  position: relative;
+
+  overflow-y: auto;
+
+  padding: 40px;
+}
+
+
+/* =========================
+   WELCOME
+========================= */
+
+.welcome {
+  height: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding-bottom: 100px;
+}
+
+.welcome-symbol {
+  position: relative;
+
+  width: 90px;
+  height: 75px;
+
+  margin-bottom: 20px;
+}
+
+.symbol-star {
+  position: absolute;
+
+  left: 10px;
+  top: 8px;
+
+  font-size: 34px;
+
+  color: #a7c8f7;
+}
+
+.symbol-hand {
+  position: absolute;
+
+  left: 31px;
+  top: 20px;
+
+  font-size: 50px;
+
+  transform: rotate(-10deg);
+
+  color: #222;
+}
+
+.symbol-dot {
+  position: absolute;
+
+  right: 8px;
+  bottom: 5px;
+
+  color: #397df2;
+
+  font-size: 20px;
+}
+
+.welcome h1 {
+  margin: 0;
+
+  font-family: "Noto Kufi Arabic", sans-serif;
+
+  font-size: 42px;
+
+  font-weight: 700;
+
+  color: #111111;
+
+  letter-spacing: -1px;
+}
+
+.welcome p {
+  margin: 12px 0 0;
+
+  font-size: 15px;
+
+  color: #727985;
+}
+
+
+/* =========================
+   MESSAGES
+========================= */
+
+.messages {
+  max-width: 900px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 28px;
+}
+
+.message-row {
+  width: 100%;
+}
+
+.message-row.doctor {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-end;
+}
+
+.message-row.palto {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+}
+
+.message-name {
+  font-size: 12px;
+
+  font-weight: 600;
+
+  color: #737b87;
+
+  margin-bottom: 8px;
+}
+
+.message-content {
+  max-width: 82%;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+
+  color: #20252d;
+
+  white-space: pre-wrap;
+}
+
+.message-row.doctor .message-content {
+  background: #f4f7fb;
+
+  padding: 12px 16px;
+
+  border-radius: 16px;
+}
+
+.message-meta {
+  margin-top: 12px;
+
+  font-size: 11px;
+
+  color: #9299a4;
+}
+
+.message-meta span {
+  margin: 0 5px;
+}
+
+.sources {
+  margin-top: 12px;
+
+  padding: 12px 14px;
+
+  border-left: 2px solid #d8e5ff;
+
+  background: #fafbfc;
+
+  border-radius: 7px;
+
+  font-size: 11px;
+
+  color: #747c87;
+}
+
+.sources-title {
+  font-weight: 600;
+
+  margin-bottom: 6px;
+
+  color: #4d5663;
+}
+
+.source-item {
+  margin-top: 4px;
+}
+
+
+/* =========================
+   THINKING
+========================= */
+
+.thinking {
+  position: absolute;
+
+  bottom: 30px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 11px 17px;
+
+  border: 1px solid #e6e9ee;
+
+  background: rgba(255,255,255,0.95);
+
+  border-radius: 999px;
+
+  box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+
+  font-size: 12px;
+
+  color: #707782;
+}
+
+.thinking-spinner {
+  width: 15px;
+  height: 15px;
+
+  border: 2px solid #dce6fa;
+
+  border-top-color: #4b85ef;
+
+  border-radius: 50%;
+
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================
+   COMPOSER
+========================= */
+
+.composer-wrapper {
+  padding: 0 40px 22px;
+
+  max-width: 980px;
+
+  width: 100%;
+
+  margin: 0 auto;
+}
+
+.composer {
+  height: 60px;
+
+  border: 1px solid #e0e3e8;
+
+  border-radius: 999px;
+
+  display: flex;
+
+  align-items: center;
+
+  padding: 6px 8px 6px 20px;
+
+  background: #ffffff;
+
+  box-shadow: 0 5px 25px rgba(0,0,0,0.035);
+}
+
+.composer:focus-within {
+  border-color: #b9ccef;
+
+  box-shadow:
+    0 5px 25px rgba(0,0,0,0.04),
+    0 0 0 3px rgba(65,120,230,0.06);
+}
+
+.composer input {
+  flex: 1;
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  font-size: 14px;
+
+  color: #222831;
+}
+
+.composer input::placeholder {
+  color: #9ca3ad;
+}
+
+.send-button {
+  width: 45px;
+  height: 45px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #78a2ee;
+
+  color: white;
+
+  font-size: 22px;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.send-button:hover {
+  background: #5e8fe7;
+
+  transform: translateY(-1px);
+}
+
+.send-button:disabled {
+  background: #d9e2f5;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+.composer-note {
+  text-align: center;
+
+  font-size: 10px;
+
+  color: #a0a6af;
+
+  margin-top: 10px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 850px) {
+
+  .sidebar {
+    width: 230px;
+  }
+
+  .chat-area {
+    padding: 25px;
+  }
+
+  .composer-wrapper {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+}
+
+@media (max-width: 650px) {
+
+  .sidebar {
+    display: none;
+  }
+
+  .main-header {
+    padding: 0 20px;
+  }
+
+  .chat-area {
+    padding: 20px;
+  }
+
+  .welcome h1 {
+    font-size: 34px;
+  }
+
+  .welcome p {
+    text-align: center;
+  }
+
+  .composer-wrapper {
+    padding: 0 15px 15px;
+  }
+
+}
+/* =========================
+   PALTO RESPONSE DIRECTION
+========================= */
+
+.message-row.palto {
+  width: 100%;
+  align-items: flex-start;
+}
+
+.message-row.palto .message-content {
+  direction: rtl;
+  text-align: right;
+  unicode-bidi: plaintext;
+}
+
+/* Arabic paragraphs */
+.message-row.palto .message-content p {
+  direction: rtl;
+  text-align: right;
+  margin: 0 0 14px 0;
+}
+
+/* Arabic headings */
+.message-row.palto .message-content h1,
+.message-row.palto .message-content h2,
+.message-row.palto .message-content h3,
+.message-row.palto .message-content h4 {
+  direction: rtl;
+  text-align: right;
+  margin: 18px 0 10px;
+}
+
+/* Lists */
+.message-row.palto .message-content ul,
+.message-row.palto .message-content ol {
+  direction: rtl;
+  text-align: right;
+  padding-right: 28px;
+  padding-left: 0;
+  margin: 8px 0 14px;
+}
+
+.message-row.palto .message-content li {
+  direction: rtl;
+  text-align: right;
+  margin-bottom: 7px;
+}
+
+/* English / Latin text inside Arabic answer */
+.message-row.palto .message-content code,
+.message-row.palto .message-content pre {
+  direction: ltr;
+  text-align: left;
+  unicode-bidi: isolate;
+}
+
+/* Tables */
+.message-row.palto .message-content table {
+  direction: rtl;
+  text-align: right;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 14px 0;
+}
+
+.message-row.palto .message-content th,
+.message-row.palto .message-content td {
+  text-align: right;
+  padding: 8px 10px;
+  border-bottom: 1px solid #e8ebef;
+}
+
+/* Sources */
+.message-row.palto .sources {
+  direction: ltr;
+  text-align: left;
+}
+
+/* Metadata */
+.message-row.palto .message-meta {
+  direction: ltr;
+  text-align: left;
+}
+
+/* English PALTO labels stay normal */
+.message-name {
+  direction: ltr;
+}
+
+/* Doctor messages stay LTR */
+.message-row.doctor {
+  direction: ltr;
+  text-align: left;
+}
+/* =========================
+   MARKDOWN SPACING
+========================= */
+
+.message-content {
+  line-height: 1.65;
+}
+
+.message-content .md-p {
+  margin: 0 0 8px 0;
+  line-height: 1.65;
+}
+
+.message-content .md-p:last-child {
+  margin-bottom: 0;
+}
+
+.message-content .md-ul,
+.message-content .md-ol {
+  margin-top: 6px;
+  margin-bottom: 8px;
+  padding-left: 24px;
+}
+
+.message-content .md-li {
+  margin-bottom: 3px;
+  line-height: 1.6;
+}
+
+.message-content .md-li:last-child {
+  margin-bottom: 0;
+}
+
+.message-content .md-h1,
+.message-content .md-h2,
+.message-content .md-h3,
+.message-content .md-h4 {
+  margin-top: 12px;
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.message-content .md-h1:first-child,
+.message-content .md-h2:first-child,
+.message-content .md-h3:first-child,
+.message-content .md-h4:first-child {
+  margin-top: 0;
+}
+
+.message-content .md-blockquote {
+  margin: 8px 0;
+}
+
+.message-content .md-hr {
+  margin: 10px 0;
+}
