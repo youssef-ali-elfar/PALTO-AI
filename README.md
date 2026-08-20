@@ -80,3 +80,9 @@ The first three messages establish conversation memory. The clinical questions t
 ## Architecture
 
 Doctor -> Next.js -> FastAPI -> Intent Router -> Memory/RAG -> Vector DB -> LLM -> Safety -> Evidence -> UI
+our team 
+Youssef El far 
+mohamed El Kassas
+Ahmed rabia
+Ahmed Harfoush
+Ammar hamida 
